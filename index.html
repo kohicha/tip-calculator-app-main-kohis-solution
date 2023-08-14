@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/output.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="min-h-screen grid place-content-center bg-LightGrayishCyan font-SpaceMonoBold text-DarkGrayishCyan m-auto">
+    <div class="flex sm:flex-row flex-col bg-white p-8 rounded-3xl m-auto sm:h-[28rem]">
+      <div class="sm:mr-12 w-[22rem] flex flex-col justify-between">
+        <div class=" flex flex-col gap-4">
+          <span>
+            Bill
+          </span>
+            <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" placeholder="0" class="bill-input bg-[url(/images/icon-dollar.svg)] bg-[1rem_,2rem] bg-VeryLightGrayishCyan bg-no-repeat p-2 text-right w-full text-lg placeholder:text-DarkGrayishCyan">
+        </div>
+        
+        <div class=" flex flex-col gap-4">
+          <span>
+            Select Tip %
+          </span>
+          
+        <div class="flex flex-col gap-2 text-white text-center text-2xl">
+          <div class="flex sm:flex-col flex-row justify-between gap-2">
+            <div class="flex sm:flex-row flex-col justify-between gap-2 sm:gap-0">
+              <div>
+                <input type="radio" value="5" name="select" id="five-percent" class="opacity-0 absolute cursor-pointer peer/five">
+                <label for="five-percent" class="cursor-pointer bg-VeryDarkDyan w-[11rem] sm:w-28 h-12 inline-block rounded-md p-2 peer-checked/five:bg-StrongCyan peer-checked/five:text-VeryDarkDyan"><span>5%</span></label>
+                
+              </div>
+              <div>
+                <input type="radio" value="10" name="select" id="ten-percent" class="opacity-0 absolute cursor-pointer peer/ten">
+                <label for="ten-percent" class="cursor-pointer bg-VeryDarkDyan w-[11rem] sm:w-28 h-12 inline-block rounded-md p-2 peer-checked/ten:bg-StrongCyan peer-checked/ten:text-VeryDarkDyan"><span>10%</span></label>
+                
+              </div>
+              <div>
+                <input type="radio" value="15" name="select" id="fifteen-percent" class="opacity-0 absolute cursor-pointer peer/fifteen">
+                <label for="fifteen-percent" class="cursor-pointer bg-VeryDarkDyan w-[11rem] sm:w-28 h-12 inline-block rounded-md p-2 peer-checked/fifteen:bg-StrongCyan peer-checked/fifteen:text-VeryDarkDyan"><span>15%</span></label>
+                
+              </div>
+            </div>
+           <div class="flex sm:flex-row flex-col justify-between  gap-2 sm:gap-0">
+            <div>
+              <input type="radio" value="25" name="select" id="twenty-five-percent" class="opacity-0 absolute cursor-pointer peer/twentyfive">
+              <label for="twenty-five-percent" class="cursor-pointer bg-VeryDarkDyan w-[11rem] sm:w-28 h-12 inline-block rounded-md p-2 peer-checked/twentyfive:bg-StrongCyan peer-checked/twentyfive:text-VeryDarkDyan"><span>25%</span></label>
+              
+            </div>
+            <div>
+              <input type="radio" value="50" name="select" id="fifty-percent" class="opacity-0 absolute cursor-pointer peer/fifty">
+              <label for="fifty-percent" class="cursor-pointer bg-VeryDarkDyan w-[11rem] sm:w-28 h-12 inline-block rounded-md p-2 peer-checked/fifty:bg-StrongCyan peer-checked/fifty:text-VeryDarkDyan"><span>50%</span></label>
+              
+            </div>
+            <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" placeholder="Custom" name="custom" class="custom-amount w-[11rem] sm:w-28 h-12 rounded-md bg-VeryLightGrayishCyan text-center placeholder:text-DarkGrayishCyan text-VeryDarkDyan">
+           </div>
+            
+          </div>
+        </div>  
+        </div>
+        <div class=" flex flex-col gap-4">
+          <div class="flex justify-between">
+            <span>
+              Number of People
+            </span>
+            <span class="text-red-500 hidden error">Can't be zero</span>
+          </div>
+          
+          
+          <div>
+            <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" placeholder="0" class="num-people placeholder:text-DarkGrayishCyan bg-VeryLightGrayishCyan w-full p-2 text-right text-lg bg-[url(/images/icon-person.svg)] bg-no-repeat bg-[1rem_,2rem]">
+          </div>
+          
+        </div>
+        
+      </div>
+      <div class="bg-VeryDarkDyan py-12 px-8 sm:w-[24rem] rounded-2xl flex flex-col justify-between mt-8 sm:mt-0">
+        <div class="flex flex-col gap-8">
+          <div class="flex flex-row justify-between">
+            <span class="flex flex-col text-VeryLightGrayishCyan">
+              Tip Amount
+              <span class="text-sm text-GrayishCyan">
+                / person
+              </span>
+            </span>
+            <span class="flex text-5xl items-center text-StrongCyan">
+              <img src="images/icon-dollar.svg" alt="" class="w-6 h-8">
+              <span class="total-tip">
+                0.00
+              </span>
+            </span>
+          </div>
+          <div class="flex flex-row justify-between">
+            <span class="flex flex-col text-VeryLightGrayishCyan">
+              Total
+              <span class="text-sm text-GrayishCyan">
+                / person
+              </span>
+            </span>
+            <span class="flex text-5xl items-center text-StrongCyan">
+              <img src="images/icon-dollar.svg" alt="" class="w-6 h-8">
+              <span class="total-amt">
+                0.00
+              </span>
+            </span>
+          </div>
+        </div>
+        
+        <button class="reset bg-StrongCyan opacity-30 text-VeryDarkDyan uppercase text-xl p-2 rounded-md mt-4 sm:mt-0">
+          Reset 
+        </button>
+      </div>
+    </div>
+    
+  </main>
+
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Kohi</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

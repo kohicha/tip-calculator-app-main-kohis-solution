@@ -1,0 +1,15 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+@font-face {
+    font-family: SpaceMonoBold;
+    src: url('/design/SpaceMono-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: SpaceMonoRegular;
+    src: url('/design/SpaceMono-Regular.ttf') format('truetype');
+}
