@@ -16,8 +16,8 @@
 </head>
 <body>
   <main class="min-h-screen grid place-content-center bg-LightGrayishCyan font-SpaceMonoBold text-DarkGrayishCyan m-auto">
-    <div class="flex sm:flex-row flex-col bg-white p-8 rounded-3xl m-auto sm:h-[28rem]">
-      <div class="sm:mr-12 w-[22rem] flex flex-col justify-between">
+    <div class="flex md:flex-row flex-col bg-white p-8 rounded-3xl m-auto md:h-[28rem]">
+      <div class="md:mr-12 w-[22rem] flex flex-col justify-between">
         <div class=" flex flex-col gap-4">
           <span>
             Bill
@@ -31,36 +31,36 @@
           </span>
           
         <div class="flex flex-col gap-2 text-white text-center text-2xl">
-          <div class="flex sm:flex-col flex-row justify-between gap-2">
-            <div class="flex sm:flex-row flex-col justify-between gap-2 sm:gap-0">
+          <div class="flex md:flex-col flex-row md:justify-between gap-2 w-full">
+            <div class="flex md:flex-row flex-col justify-between gap-2 md:gap-0">
               <div>
                 <input type="radio" value="5" name="select" id="five-percent" class="opacity-0 absolute cursor-pointer peer/five">
-                <label for="five-percent" class="cursor-pointer bg-VeryDarkDyan w-[11rem] sm:w-28 h-12 inline-block rounded-md p-2 peer-checked/five:bg-StrongCyan peer-checked/five:text-VeryDarkDyan"><span>5%</span></label>
+                <label for="five-percent" class="cursor-pointer bg-VeryDarkDyan w-[11rem] md:w-28 h-12 inline-block rounded-md p-2 peer-checked/five:bg-StrongCyan peer-checked/five:text-VeryDarkDyan"><span>5%</span></label>
                 
               </div>
               <div>
                 <input type="radio" value="10" name="select" id="ten-percent" class="opacity-0 absolute cursor-pointer peer/ten">
-                <label for="ten-percent" class="cursor-pointer bg-VeryDarkDyan w-[11rem] sm:w-28 h-12 inline-block rounded-md p-2 peer-checked/ten:bg-StrongCyan peer-checked/ten:text-VeryDarkDyan"><span>10%</span></label>
+                <label for="ten-percent" class="cursor-pointer bg-VeryDarkDyan w-[11rem] md:w-28 h-12 inline-block rounded-md p-2 peer-checked/ten:bg-StrongCyan peer-checked/ten:text-VeryDarkDyan"><span>10%</span></label>
                 
               </div>
               <div>
                 <input type="radio" value="15" name="select" id="fifteen-percent" class="opacity-0 absolute cursor-pointer peer/fifteen">
-                <label for="fifteen-percent" class="cursor-pointer bg-VeryDarkDyan w-[11rem] sm:w-28 h-12 inline-block rounded-md p-2 peer-checked/fifteen:bg-StrongCyan peer-checked/fifteen:text-VeryDarkDyan"><span>15%</span></label>
+                <label for="fifteen-percent" class="cursor-pointer bg-VeryDarkDyan w-[11rem] md:w-28 h-12 inline-block rounded-md p-2 peer-checked/fifteen:bg-StrongCyan peer-checked/fifteen:text-VeryDarkDyan"><span>15%</span></label>
                 
               </div>
             </div>
-           <div class="flex sm:flex-row flex-col justify-between  gap-2 sm:gap-0">
+           <div class="flex md:flex-row flex-col justify-between  gap-2 md:gap-0">
             <div>
               <input type="radio" value="25" name="select" id="twenty-five-percent" class="opacity-0 absolute cursor-pointer peer/twentyfive">
-              <label for="twenty-five-percent" class="cursor-pointer bg-VeryDarkDyan w-[11rem] sm:w-28 h-12 inline-block rounded-md p-2 peer-checked/twentyfive:bg-StrongCyan peer-checked/twentyfive:text-VeryDarkDyan"><span>25%</span></label>
+              <label for="twenty-five-percent" class="cursor-pointer bg-VeryDarkDyan w-[11rem] md:w-28 h-12 inline-block rounded-md p-2 peer-checked/twentyfive:bg-StrongCyan peer-checked/twentyfive:text-VeryDarkDyan"><span>25%</span></label>
               
             </div>
             <div>
               <input type="radio" value="50" name="select" id="fifty-percent" class="opacity-0 absolute cursor-pointer peer/fifty">
-              <label for="fifty-percent" class="cursor-pointer bg-VeryDarkDyan w-[11rem] sm:w-28 h-12 inline-block rounded-md p-2 peer-checked/fifty:bg-StrongCyan peer-checked/fifty:text-VeryDarkDyan"><span>50%</span></label>
+              <label for="fifty-percent" class="cursor-pointer bg-VeryDarkDyan w-[11rem] md:w-28 h-12 inline-block rounded-md p-2 peer-checked/fifty:bg-StrongCyan peer-checked/fifty:text-VeryDarkDyan"><span>50%</span></label>
               
             </div>
-            <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" placeholder="Custom" name="custom" class="custom-amount w-[11rem] sm:w-28 h-12 rounded-md bg-VeryLightGrayishCyan text-center placeholder:text-DarkGrayishCyan text-VeryDarkDyan">
+            <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" placeholder="Custom" name="custom" class="custom-amount w-[11rem] md:w-28 h-12 rounded-md bg-VeryLightGrayishCyan text-center placeholder:text-DarkGrayishCyan text-VeryDarkDyan">
            </div>
             
           </div>
@@ -82,12 +82,12 @@
         </div>
         
       </div>
-      <div class="bg-VeryDarkDyan py-12 px-8 sm:w-[24rem] rounded-2xl flex flex-col justify-between mt-8 sm:mt-0">
+      <div class="bg-VeryDarkDyan py-12 px-8 md:w-[24rem] rounded-2xl flex flex-col justify-between mt-8 md:mt-0">
         <div class="flex flex-col gap-8">
           <div class="flex flex-row justify-between">
             <span class="flex flex-col text-VeryLightGrayishCyan">
               Tip Amount
-              <span class="text-sm text-GrayishCyan">
+              <span class="text-md text-GrayishCyan">
                 / person
               </span>
             </span>
@@ -101,7 +101,7 @@
           <div class="flex flex-row justify-between">
             <span class="flex flex-col text-VeryLightGrayishCyan">
               Total
-              <span class="text-sm text-GrayishCyan">
+              <span class="text-md text-GrayishCyan">
                 / person
               </span>
             </span>
@@ -114,7 +114,7 @@
           </div>
         </div>
         
-        <button class="reset bg-StrongCyan opacity-30 text-VeryDarkDyan uppercase text-xl p-2 rounded-md mt-4 sm:mt-0">
+        <button class="reset bg-StrongCyan opacity-30 text-VeryDarkDyan uppercase text-xl p-2 rounded-md mt-4 md:mt-0">
           Reset 
         </button>
       </div>

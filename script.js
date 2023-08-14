@@ -2,14 +2,13 @@ var billInput = document.querySelector('.bill-input');
 
 var customAmount = document.querySelector('.custom-amount');
 
-var numPeople = document.querySelector('.num-people');
+var numPeopleAmount = document.querySelector('.num-people');
 
 var selectTip = document.getElementsByName('select'); 
 
 var totalTip = document.querySelector('.total-tip');
 
 var totalAmount = document.querySelector('.total-amt');
-
 
 let bill;
 
@@ -21,31 +20,23 @@ let totaltip;
 
 let totalamount;
 
-numPeople.addEventListener('keydown', function(){
-    setInterval(() => {
+numPeopleAmount.addEventListener('change', function(){
+
         people = parseInt(this.value);
-    }, 300);
+
     
 })
 
+billInput.addEventListener('change', function(){
 
-numPeople.addEventListener('keydown', function(){
-    setInterval(() => {
-        people = parseInt(this.value);
-    }, 300);
-    
-})
-
-billInput.addEventListener('keydown', function(){
-    setInterval(() => {
         bill = parseFloat(this.value)
-    }, 300);
+
 });
 
-customAmount.addEventListener('keydown', function(){
-    setInterval(() => {
+customAmount.addEventListener('change', function(){
+
         tip = parseFloat(this.value/100).toFixed(2)
-    }, 300);
+
 })
 
 
@@ -65,24 +56,19 @@ for (let i = 0; i < selectTip.length; i++){
 }
 
 function calculateTipPerson(){
-    setInterval(() => {
         totaltip = (bill * tip) / people;
-        totalTip.innerHTML = totaltip.toFixed(2).toString();
-    }, 300);
-    
+        totalTip.textContent = totaltip.toFixed(2).toString();
 }
 
 function calculateTotalPerson(){
-    setInterval(() => {
         totalamount = (bill + totaltip) / people;
-        totalAmount.innerHTML = totalamount.toFixed(2).toString();
-    }, 300);
+        totalAmount.textContent = totalamount.toFixed(2).toString();
     
 }
 
-numPeople.addEventListener('keydown', function(){
+numPeopleAmount.addEventListener('change', function(){
     error = document.querySelector('.error')
-    if (numPeople.value == 0){
+    if (numPeopleAmount.value == 0){
         error.classList.remove('hidden')
     }else{
         calculateTipPerson()
@@ -102,8 +88,10 @@ reset.addEventListener('click', function(){
     selectTip.forEach(el => {
         el.checked = false;
     })
-    customAmount.value = ""
-    numPeople.value = ""
+    customAmount.value = "" 
+    numPeopleAmount.value = ""
+    totalAmount.textContent = "0.00"
+    totalTip.textContent = "0.00"
     reset.disabled = true;
     reset.classList.add('opacity-30')
     reset.classList.remove('hover:bg-LightGrayishCyan')
